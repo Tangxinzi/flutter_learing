@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './demo/bottom_navigation_bar_demo.dart';
+import './demo/navigator_demo.dart';
 
 void main() => runApp(App());
 
@@ -8,7 +8,12 @@ class App extends StatelessWidget {
     Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => Home(),
+          '/about': (context) => Page(title: 'About'),
+        },
+        // home: Home(),
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -59,7 +64,7 @@ class Home extends StatelessWidget {
               Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
             ],
           ),
-          bottomNavigationBar: BottomNavigationBarDemo()
+          bottomNavigationBar: NavigatorDemo()
         ),
       );
     }
