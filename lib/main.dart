@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_japanese_lite/demo/http/http_demo.dart';
 import './demo/navigator_demo.dart';
+import './demo/http/http_demo.dart';
 
 void main() => runApp(App());
 
@@ -8,10 +10,11 @@ class App extends StatelessWidget {
     Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: '/',
+        initialRoute: '/http',
         routes: {
           '/': (context) => Home(),
           '/about': (context) => Page(title: 'About'),
+          '/http': (context) => HttpDemo(),
         },
         // home: Home(),
         theme: ThemeData(
