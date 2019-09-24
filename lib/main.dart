@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_japanese_lite/demo/http/http_demo.dart';
-import './demo/navigator_demo.dart';
-import './demo/http/http_demo.dart';
+// import 'package:flutter_japanese_lite/demo/http/http_demo.dart';
+// import './demo/navigator_demo.dart';
+// import './demo/http/http_demo.dart';
+import './demo/layout_demo.dart';
 
 void main() => runApp(App());
 
@@ -10,13 +11,13 @@ class App extends StatelessWidget {
     Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: '/http',
-        routes: {
-          '/': (context) => Home(),
-          '/about': (context) => Page(title: 'About'),
-          '/http': (context) => HttpDemo(),
-        },
-        // home: Home(),
+        // initialRoute: '/http',
+        // routes: {
+        //   '/': (context) => Home(),
+        //   '/about': (context) => Page(title: 'About'),
+        //   '/http': (context) => HttpDemo(),
+        // },
+        home: Home(),
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -64,10 +65,11 @@ class Home extends StatelessWidget {
             children: <Widget>[
               Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
               Icon(Icons.change_history, size: 128.0, color: Colors.black12),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
+              // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
+              LayoutDemo()
             ],
           ),
-          bottomNavigationBar: NavigatorDemo()
+          // bottomNavigationBar: NavigatorDemo()
         ),
       );
     }
