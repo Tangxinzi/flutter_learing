@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_japanese_lite/demo/http/http_demo.dart';
-// import './demo/navigator_demo.dart';
-// import './demo/http/http_demo.dart';
+import './demo/navigator_demo.dart';
+import './demo/bottom_navigation_bar_demo.dart';
+import './demo/http_demo.dart';
 import './demo/layout_demo.dart';
+import './demo/view_demo.dart';
 
 void main() => runApp(App());
 
@@ -31,7 +32,7 @@ class Home extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
@@ -57,7 +58,8 @@ class Home extends StatelessWidget {
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_florist)),
                 Tab(icon: Icon(Icons.change_history)),
-                Tab(icon: Icon(Icons.directions_bike))
+                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.view_quilt))
               ],
             ),
           ),
@@ -66,10 +68,11 @@ class Home extends StatelessWidget {
               Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
               Icon(Icons.change_history, size: 128.0, color: Colors.black12),
               // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
-              LayoutDemo()
+              LayoutDemo(),
+              ViewDemo()
             ],
           ),
-          // bottomNavigationBar: NavigatorDemo()
+          bottomNavigationBar: BottomNavigationBarDemo()
         ),
       );
     }
