@@ -4,6 +4,7 @@ import './demo/bottom_navigation_bar_demo.dart';
 import './demo/http_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
 
 void main() => runApp(App());
 
@@ -12,12 +13,6 @@ class App extends StatelessWidget {
     Widget build(BuildContext context) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        // initialRoute: '/http',
-        // routes: {
-        //   '/': (context) => Home(),
-        //   '/about': (context) => Page(title: 'About'),
-        //   '/http': (context) => HttpDemo(),
-        // },
         home: Home(),
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
@@ -69,7 +64,7 @@ class Home extends StatelessWidget {
               Icon(Icons.change_history, size: 128.0, color: Colors.black12),
               // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12)
               LayoutDemo(),
-              ViewDemo()
+              SliverDemo()
             ],
           ),
           bottomNavigationBar: BottomNavigationBarDemo()
