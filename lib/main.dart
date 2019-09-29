@@ -10,7 +10,8 @@ import './demo/material_components.dart';
 import './demo/state/state_management_demo.dart';
 import './demo/chip_demo.dart';
 import './demo/card_demo.dart';
-import 'demo/stepper_demo.dart';
+import './demo/stepper_demo.dart';
+import './demo/stream_demo.dart';
 
 void main() => runApp(App());
 
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: FormDemo(),
-        initialRoute: '/stepper',
+        initialRoute: '/stream',
         routes: {
           '/': (context) => Home(),
           '/form': (context) => FormDemo(),
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
           '/state-management': (context) => StateManagementDemo(),
           '/card': (context) => CardDemo(),
           '/stepper': (context) => StepperDemo(),
+          '/stream': (context) => StreamDemo(),
         },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
