@@ -8,6 +8,9 @@ import './demo/sliver_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_components.dart';
 import './demo/state/state_management_demo.dart';
+import './demo/chip_demo.dart';
+import './demo/card_demo.dart';
+import 'demo/stepper_demo.dart';
 
 void main() => runApp(App());
 
@@ -17,12 +20,15 @@ class App extends StatelessWidget {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: FormDemo(),
-        initialRoute: '/state-management',
+        initialRoute: '/stepper',
         routes: {
           '/': (context) => Home(),
           '/form': (context) => FormDemo(),
           '/mdc': (context) => MaterialComponents(),
+          '/chip': (context) => ChipDemo(),
           '/state-management': (context) => StateManagementDemo(),
+          '/card': (context) => CardDemo(),
+          '/stepper': (context) => StepperDemo(),
         },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
