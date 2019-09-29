@@ -13,6 +13,7 @@ import './demo/card_demo.dart';
 import './demo/stepper_demo.dart';
 import './demo/stream_demo.dart';
 import './demo/bloc/bloc_demo.dart';
+import './demo/animation_demo.dart';
 
 void main() => runApp(App());
 
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: FormDemo(),
-        initialRoute: '/bloc',
+        initialRoute: '/animation',
         routes: {
           '/': (context) => Home(),
           '/form': (context) => FormDemo(),
@@ -33,6 +34,7 @@ class App extends StatelessWidget {
           '/stepper': (context) => StepperDemo(),
           '/stream': (context) => StreamDemo(),
           '/bloc': (context) => BlocDemo(),
+          '/animation': (context) => AnimationDemo(),
         },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
