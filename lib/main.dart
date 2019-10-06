@@ -14,6 +14,7 @@ import './demo/stepper_demo.dart';
 import './demo/stream_demo.dart';
 import './demo/bloc/bloc_demo.dart';
 import './demo/animation_demo.dart';
+import './demo/flukit/swiper_demo.dart';
 
 void main() => runApp(App());
 
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         // home: FormDemo(),
-        initialRoute: '/animation',
+        initialRoute: '/swiper',
         routes: {
           '/': (context) => Home(),
           '/form': (context) => FormDemo(),
@@ -35,6 +36,10 @@ class App extends StatelessWidget {
           '/stream': (context) => StreamDemo(),
           '/bloc': (context) => BlocDemo(),
           '/animation': (context) => AnimationDemo(),
+          '/navigator': (context) => NavigatorDemo(),
+          '/http': (context) => HttpDemo(),
+          '/view': (context) => ViewDemo(),
+          '/swiper': (context) => SwiperDemo(),
         },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
